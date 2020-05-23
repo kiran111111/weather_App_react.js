@@ -32,6 +32,7 @@ export default class App  extends React.Component{
        city:'',
        country : '',
        description:'',
+       icon:"",
        error :'Please enter values',
        bState: 'none'
      }
@@ -86,6 +87,7 @@ export default class App  extends React.Component{
             temperature : res.main.temp,
             humidity : res.main.humidity,
             description: res.weather[0].description,
+            icon : res.weather[0].icon,
             error:""
           })
           this.handleDisplayOff()
@@ -141,6 +143,7 @@ export default class App  extends React.Component{
               country={this.state.country}
               humidity={this.state.humidity}
               description={this.state.description}
+              icon = {this.state.icon}
               error={this.state.error}
             /> 
             </div>

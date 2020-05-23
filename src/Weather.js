@@ -1,9 +1,6 @@
 import React from 'react'
 
 
-
-
-
 export default  class Weather extends React.Component {
   constructor(props){
     super(props);
@@ -22,13 +19,19 @@ export default  class Weather extends React.Component {
     temperature,
     humidity,
     description,
+    icon,
     error} = this.props;
 
     console.log(this.fahToCel(temperature))
 
+    // if(icon){
+    //   let iconEl = "http://openweathermap.org/img/w/" + icon + ".png";
+    // }
+
    return (
    <>
    <div className="weather__info">
+      {icon && <img src={"http://openweathermap.org/img/w/" + icon + ".png"} />}
 
      {city && (
           <p className="weather__key">

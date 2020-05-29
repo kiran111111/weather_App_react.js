@@ -22,7 +22,6 @@ export default  class Weather extends React.Component {
     icon,
     error} = this.props;
 
-    console.log(this.fahToCel(temperature))
 
     // if(icon){
     //   let iconEl = "http://openweathermap.org/img/w/" + icon + ".png";

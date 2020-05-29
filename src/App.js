@@ -67,7 +67,6 @@ export default class App  extends React.Component{
     .then(data=>{
         let lat = data.results[0].geometry.location.lat;
         let lon = data.results[0].geometry.location.lng;
-        console.log(lat)
    //put the coordinate in the fucntion that gets the weather--
         Weather(lat,lon)
       })
